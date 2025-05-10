@@ -31,9 +31,13 @@ public class QStore extends EntityPathBase<Store> {
 
     public final NumberPath<Long> id = createNumber("id", Long.class);
 
+    public final ListPath<umc.spring.domain.mapping.Mission, umc.spring.domain.mapping.QMission> missionList = this.<umc.spring.domain.mapping.Mission, umc.spring.domain.mapping.QMission>createList("missionList", umc.spring.domain.mapping.Mission.class, umc.spring.domain.mapping.QMission.class, PathInits.DIRECT2);
+
     public final StringPath name = createString("name");
 
     public final QRegion region;
+
+    public final ListPath<Review, QReview> reviewList = this.<Review, QReview>createList("reviewList", Review.class, QReview.class, PathInits.DIRECT2);
 
     public final NumberPath<Float> score = createNumber("score", Float.class);
 
