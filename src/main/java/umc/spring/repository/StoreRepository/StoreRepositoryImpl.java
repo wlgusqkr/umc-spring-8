@@ -32,4 +32,5 @@ public class StoreRepositoryImpl implements StoreRepositoryCustom {
                 .where(predicate)
                 .fetch();
     }
+
 }
