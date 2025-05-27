@@ -1,8 +1,8 @@
 package umc.spring.converter;
 
 import umc.spring.domain.Store;
-import umc.spring.web.dto.StoreRequestDTO;
-import umc.spring.web.dto.StoreResposneDTO;
+import umc.spring.web.dto.Store.StoreRequestDTO;
+import umc.spring.web.dto.Store.StoreResposneDTO;
 
 public class StoreConverter {
 

@@ -10,7 +10,7 @@ import umc.spring.domain.Region;
 import umc.spring.domain.Store;
 import umc.spring.repository.RegionRepository.RegionRepository;
 import umc.spring.repository.StoreRepository.StoreRepository;
-import umc.spring.web.dto.StoreRequestDTO;
+import umc.spring.web.dto.Store.StoreRequestDTO;
 
 import java.util.List;
 import java.util.Optional;
@@ -37,7 +37,7 @@ public class StoreQueryServiceImpl implements StoreQueryService {
         return filteredStores;
     }
 
-    // 이거 다른 사람들은 어떻게 했을까?
+
     @Override
     public Store createStore(StoreRequestDTO.CreateDTO request) {
 

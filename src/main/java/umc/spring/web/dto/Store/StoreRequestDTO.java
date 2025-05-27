@@ -1,4 +1,4 @@
-package umc.spring.web.dto;
+package umc.spring.web.dto.Store;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
