@@ -12,7 +12,6 @@ import umc.spring.repository.RegionRepository.RegionRepository;
 import umc.spring.repository.StoreRepository.StoreRepository;
 import umc.spring.web.dto.Store.StoreRequestDTO;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -28,14 +27,14 @@ public class StoreQueryServiceImpl implements StoreQueryService {
         return storeRepository.findById(id);
     }
 
-    @Override
-    public List<Store> findStoresByNameAndScore(String name, Float score) {
-        List<Store> filteredStores = storeRepository.dynamicQueryWithBooleanBuilder(name, score);
-
-        filteredStores.forEach(store -> System.out.println("Store: " + store));
-        // 이걸 넣으면 되고 이걸 넣으면 안되고 뭐지?
-        return filteredStores;
-    }
+//    @Override
+//    public List<Store> findStoresByNameAndScore(String name, Float score) {
+////        List<Store> filteredStores = storeRepository.dynamicQueryWithBooleanBuilder(name, score);
+//
+//        filteredStores.forEach(store -> System.out.println("Store: " + store));
+//        // 이걸 넣으면 되고 이걸 넣으면 안되고 뭐지?
+//        return filteredStores;
+//    }
 
 
     @Override
