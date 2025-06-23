@@ -15,6 +15,14 @@ import java.util.stream.Collectors;
 
 public class MemberConverter {
 
+
+    public static MemberResponseDTO.LoginResultDTO toLoginResultDTO(Long memberId, String accessToken) {
+        return MemberResponseDTO.LoginResultDTO.builder()
+                .memberId(memberId)
+                .accessToken(accessToken)
+                .build();
+    }
+
     public static MemberResponseDTO.JoinResultDTO toJoinResultDTO(Member member){
         return MemberResponseDTO.JoinResultDTO.builder()
                 .memberId(member.getId())
@@ -95,6 +103,15 @@ public class MemberConverter {
                 .isFirst(memberMissionList.isFirst())
                 .isLast(memberMissionList.isLast())
                 .totalPage(memberMissionList.getTotalPages())
+                .build();
+    }
+
+    public static MemberResponseDTO.MemberInfoDTO toMemberInfoDTO(Member member){
+
+        return MemberResponseDTO.MemberInfoDTO.builder()
+                .name(member.getName())
+                .email(member.getEmail())
+                .gender(member.getGender())
                 .build();
     }
 }

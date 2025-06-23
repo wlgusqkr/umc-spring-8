@@ -34,6 +34,10 @@ public enum ErrorStatus implements BaseErrorCode {
 
     REGION_ID_NOT_FOUND(HttpStatus.NOT_FOUND, "REGION4001", "Region ID에 맞는 지역이 없습니다."),
 
+    INVALID_TOKEN(HttpStatus.BAD_REQUEST, "TOKEN4001", "유효하지 않은 토큰입니다."),
+
+    INVALID_PASSWORD(HttpStatus.BAD_REQUEST, "TOKEN4001", "유효하지 않은 비밀번호입니다."),
+
     PAGE_NUMBER_NEGATIVE(HttpStatus.BAD_REQUEST, "PAGE4001", "PAGE 번호는 양수만 가능합니다."),
     PAGE_NUMBER_NOT_INTEGER(HttpStatus.BAD_REQUEST, "PAGE4002", "PAGE 번호는 정수만 가능합니다.");
 
