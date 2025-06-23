@@ -1,42 +1,30 @@
-package umc.spring.web.dto.Member;
+package umc.spring.web.dto.Store;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
 import java.time.LocalDate;
 import java.util.List;
 
-public class MemberResponseDTO {
+public class StoreResponseDTO {
 
     @Builder
     @Getter
     @NoArgsConstructor
     @AllArgsConstructor
-    public static class JoinResultDTO{
-        Long memberId;
-        LocalDateTime createdAt;
-    }
-
-    @Builder
-    @Getter
-    @AllArgsConstructor
-    @NoArgsConstructor
-    public static class ReviewPreviewDTO {
-        String memberNickName;
-        Float score;
-        String body;
-        LocalDateTime createdAt;
+    public static class CreateResultDTO {
+        Long id;
+        String name;
     }
 
     @Builder
     @Getter
     @NoArgsConstructor
     @AllArgsConstructor
-    public static class ReviewPreviewListDTO {
-        List<MemberResponseDTO.ReviewPreviewDTO> reviewList;
+    public static class ReviewPreViewListDTO {
+        List<ReviewPreViewDTO> reviewList;
         Integer listSize;
         Integer totalPage;
         Long totalElements;
@@ -44,27 +32,39 @@ public class MemberResponseDTO {
         Boolean isLast;
     }
 
-    @Getter
     @Builder
+    @Getter
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class ReviewPreViewDTO {
+        String ownerNickname;
+        Float score;
+        String body;
+        LocalDate createdAt;
+    }
+
+    @Builder
+    @Getter
     @NoArgsConstructor
     @AllArgsConstructor
     public static class MissionPreViewDTO {
+        Long missionId;
         Integer reward;
-        LocalDate deadline;
         String missionSpec;
-        String status;
+        LocalDate deadline;
     }
 
-    @Getter
     @Builder
+    @Getter
     @NoArgsConstructor
     @AllArgsConstructor
-    public static class MissionPreviewListDTO {
-        List<MissionPreViewDTO> missionPreViewDTOList;
+    public static class MissionPreViewListDTO {
+        List<MissionPreViewDTO> missionList;
         Integer listSize;
         Integer totalPage;
         Long totalElements;
         Boolean isFirst;
         Boolean isLast;
+
     }
 }

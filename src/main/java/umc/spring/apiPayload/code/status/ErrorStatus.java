@@ -32,7 +32,12 @@ public enum ErrorStatus implements BaseErrorCode {
     // 지역ID가 없을 때
     TEMP_EXCEPTION(HttpStatus.NOT_FOUND, "REGION", "Region ID가 없습니다."),
 
-    REGION_ID_NOT_FOUND(HttpStatus.NOT_FOUND, "REGION4001", "Region ID에 맞는 지역이 없습니다.");
+    REGION_ID_NOT_FOUND(HttpStatus.NOT_FOUND, "REGION4001", "Region ID에 맞는 지역이 없습니다."),
+    REGION_ID_NOT_FOUND(HttpStatus.NOT_FOUND, "REGION4001", "Region ID에 맞는 지역이 없습니다."),
+
+    PAGE_NUMBER_NEGATIVE(HttpStatus.BAD_REQUEST, "PAGE4001", "PAGE 번호는 양수만 가능합니다."),
+    PAGE_NUMBER_NOT_INTEGER(HttpStatus.BAD_REQUEST, "PAGE4002", "PAGE 번호는 정수만 가능합니다.");
+
 
     private final HttpStatus httpStatus;
     private final String code;
